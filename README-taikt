@@ -1,0 +1,14 @@
+1. Installation
+sudo apt-get install autoconf
+sudo apt-get install libtool
+sudo apt-get install libudev-dev
+./autogen.sh
+make
+make install
+
+2. Create documents
+cd doc
+doxygen doxygen.cfg
+==> html files is created
+cd html
+=> open index.html
