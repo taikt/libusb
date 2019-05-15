@@ -4,7 +4,7 @@ sudo apt-get install libtool
 sudo apt-get install libudev-dev
 ./autogen.sh
 make
-make install
+sudo make install prefix=/usr
 
 2. Create documents
 cd doc
@@ -12,3 +12,17 @@ doxygen doxygen.cfg
 ==> html files is created
 cd html
 => open index.html
+
+3. TODO
+list_add
+    - libusb_hotplug_register_callback (examples/hotplugtest.c) => list_add (hotplug.c) 
+
+handle_events
+    - add event: 
+        usbi_connect_device => usbi_hotplug_notification => list_add
+    - handle event: 
+        examples/hotplugtest.c: libusb_handle_events
+    
+
+
+
